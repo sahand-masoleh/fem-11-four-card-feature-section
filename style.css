@@ -1,8 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
+
+body {
+	/* ### primary */
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+
+	/* ### neutral */
+	--very-dark-blue: hsl(234, 12%, 34%); /* title */
+	--grayish-blue: hsl(229, 6%, 66%); /* text */
+	--very-light-gray: hsl(0, 0%, 98%);
+
+	font-size: 15px;
+	color: var(--grayish-blue);
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	justify-items: center;
+
+	background-color: var(--very-light-gray);
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2em;
+	margin: 3em auto;
+	max-width: 20em;
+}
+
+p {
+	font-weight: 400;
+}
+
+.headers {
+	color: var(--very-dark-blue);
+}
+
+/* ~~~~~~~~~~ title & text ~~~~~~~~~~ */
+#title {
+	text-align: center;
+	font-size: 1.6em;
+}
+#title span {
+	font-weight: 200;
+}
+
+#text {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+/* ~~~~~~~~~~ cards ~~~~~~~~~~ */
+
+.cards {
+	aspect-ratio: 3/2;
+	/* max-width: 20em; */
+	width: 100%;
+	background-color: white;
+	position: relative;
+	padding: 2em;
+	border-radius: 0.5em;
+	box-shadow: 0 1em 1em rgb(0, 0, 0, 0.1);
+	border-top: 5px solid var(--border-color);
+	font-size: 0.8em;
+}
+
+.icons {
+	position: absolute;
+	right: 2em;
+	bottom: 2em;
+}
+
+/* ~~~~~~~~~~ footer ~~~~~~~~~~ */
 
 .attribution {
 	font-size: 11px;
